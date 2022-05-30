@@ -4,11 +4,11 @@ function TodosList(props) {
   const todos = props;
 
   return (
-    <ul>
-      {todos.todos.map((todo) => (
-        <TodoItem key={todo.id}>{todo.title}</TodoItem>
-      ))}
-    </ul>
+    <TodoItem
+      handleChangeProps={todos.handleChangeProps}
+      key={todos.todo.id}
+      todo={todos.todo}
+    />
   );
 }
 

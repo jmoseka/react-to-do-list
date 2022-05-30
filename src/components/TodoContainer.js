@@ -2,7 +2,7 @@ import TodosList from './TodosList';
 import Header from './Header';
 
 function TodoContainer() {
-  const todos = [
+  const todo = [
     {
       id: 1,
       title: 'Setup development environment',
@@ -16,14 +16,19 @@ function TodoContainer() {
     {
       id: 3,
       title: 'Deploy to live server',
-      completed: false,
+      completed: true,
     },
   ];
+
+  const handleChange = (id) => {
+    // eslint-disable-next-line no-console
+    console.log('clicked', id);
+  };
 
   return (
     <div>
       <Header />
-      <TodosList todos={todos} />
+      <TodosList todo={todo} handleChangeProps={handleChange} />
     </div>
   );
 }
