@@ -1,12 +1,12 @@
-// eslint-disable-next-line arrow-body-style
+import TodoItem from './TodoItem';
+
 function TodosList(props) {
   const todos = props;
-  console.log(todos);
 
   return (
     <ul>
       {todos.todos.map((todo) => (
-        <li key={todo.title}>{todo.title}</li>
+        <TodoItem key={todo.id}>{todo.title}</TodoItem>
       ))}
     </ul>
   );
