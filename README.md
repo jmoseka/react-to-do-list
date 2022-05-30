@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # react-to-do-list
 
 This project is built in order to consolidates knowledge about React, components, props, state, and hooks
@@ -64,3 +65,7 @@ Give a ⭐️ if you like this project!
 - Inspiration
 - etc
 
+=======
+# react-to-do
+A react-to-do app that consolidates knowledge about React, components, props, state, and hooks
+>>>>>>> 4cb4ec638ecaa494318769865bd2a206a70d3c78
