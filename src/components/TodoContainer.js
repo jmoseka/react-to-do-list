@@ -1,4 +1,5 @@
 import TodosList from './TodosList';
+import Header from './Header';
 
 function TodoContainer() {
   const todos = [
@@ -21,6 +22,7 @@ function TodoContainer() {
 
   return (
     <div>
+      <Header />
       <TodosList todos={todos} />
     </div>
   );
