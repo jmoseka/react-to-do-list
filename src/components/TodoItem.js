@@ -4,19 +4,19 @@ function TodoItem(props) {
   const prop = props;
   // eslint-disable-next-line no-console
   // console.log(prop.handleChangeProps.name);
+  const { completed, id, title } = prop.todo;
 
   return (
     <ul>
-      {prop.todo.map((todo) => (
-        <li key={todo.id}>
-          {todo.title}
-          <input
-            type="checkbox"
-            checked={prop.todo.completed}
-            onChange={() => prop.handleChangeProps(todo.id)}
-          />
-        </li>
-      ))}
+      <li key={id}>
+        {title}
+        <input
+          type="checkbox"
+          checked={completed}
+          onChange={() => prop.handleChangeProps(id)}
+        />
+        <button type="button" onClick={() => prop.deleteTodoProps(id)}>Delete</button>
+      </li>
     </ul>
 
   );

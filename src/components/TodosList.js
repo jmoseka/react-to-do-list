@@ -4,11 +4,15 @@ function TodosList(props) {
   const todos = props;
 
   return (
-    <TodoItem
-      handleChangeProps={todos.handleChangeProps}
-      key={todos.todo.id}
-      todo={todos.todo}
-    />
+    todos.todo.map((item) => (
+      <TodoItem
+        key={item.id}
+        todo={item}
+        handleChangeProps={todos.handleChangeProps}
+        deleteTodoProps={todos.deleteTodoProps}
+      />
+    ))
+
   );
 }
 
