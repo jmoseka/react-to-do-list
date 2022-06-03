@@ -50,10 +50,16 @@ function TodoContainer() {
   };
 
   return (
-    <div>
-      <Header />
-      <InputTodo addTodoProps={addTodoItem} />
-      <TodosList todo={todos} handleChangeProps={handleChange} deleteTodoProps={delTodo} />
+    <div className="container">
+      <div className="inner">
+        <Header />
+        <InputTodo addTodoProps={addTodoItem} />
+        <TodosList
+          todo={todos}
+          handleChangeProps={handleChange}
+          deleteTodoProps={delTodo}
+        />
+      </div>
     </div>
   );
 }
