@@ -49,6 +49,16 @@ function TodoContainer() {
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
+  const setUpdate = async (updateTitle, id) => {
+    const newTodo = [...todos].map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, title: updateTitle };
+      }
+      return todo;
+    });
+    setTodos(newTodo);
+  };
+
   return (
     <div className="container">
       <div className="inner">
@@ -58,6 +68,7 @@ function TodoContainer() {
           todo={todos}
           handleChangeProps={handleChange}
           deleteTodoProps={delTodo}
+          setUpdate={setUpdate}
         />
       </div>
     </div>
